@@ -94,12 +94,12 @@ const updateUI = data => {
     meals.insertAdjacentHTML('beforeend', html)
 }
 
-searchForm.addEventListener('submit', e => {
+searchForm.addEventListener('submit', async e => {
     e.preventDefault()
-    meals.innerHTML = ""
-    title.textContent = `Showing result for "${searchForm.input.value}"`
     const query = `?s=${searchForm.input.value}`
     fetchMeals(query)
+    meals.innerHTML = ""
+    title.textContent = `Showing result for "${searchForm.input.value}"`
     searchForm.input.value = ""
     searchForm.input.focus()
 })
