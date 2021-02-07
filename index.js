@@ -95,11 +95,15 @@ const updateUI = data => {
 }
 
 searchForm.addEventListener('submit', async e => {
-    e.preventDefault()
-    const query = `?s=${searchForm.input.value}`
-    fetchMeals(query)
-    meals.innerHTML = ""
-    title.textContent = `Showing result for "${searchForm.input.value}"`
-    searchForm.input.value = ""
-    searchForm.input.focus()
+    if (searchForm.value) {
+        e.preventDefault()
+        const query = `?s=${searchForm.input.value.trim()}`
+        fetchMeals(query)
+        meals.innerHTML = ""
+        title.textContent = `Showing result for "${searchForm.input.value.trim()}"`
+        searchForm.input.value = ""
+        searchForm.input.focus()
+    } else {
+        e.preventDefault()
+    }
 })
