@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles.css">
+    <title>Cooking Monster</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand logo" href="#">Cooking Master</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#">Recipies</a>
+                        <a class="nav-link" href="#">Blog</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="search">
+
+        <div class="container search-bar">
+            <form class="w-50 input-group mb-3 search-form">
+                <input type="text" name="input" class="form-control search-input" placeholder="Enter a Recipie name"
+                    aria-label="Enter a Recipie name" aria-describedby="button-addon2">
+                <input class="btn search-btn" name="submit" type="submit" id="button-addon2" value="Search">
+            </form>
+            <h2 class="section-title">Search for a Recipie...</h2>
+        </div>
+    </section>
+
+    <section class="result">
+        <div class="container">
+            <div class="card-group meals">
+
+            </div>
+        </div>
+    </section>
+    <section class="px-3 error container text-center hidden">
+        <h1 class="display-1 text-danger">404</h1>
+        <h1 class="display-1 text-danger">Meals not Found</h1>
+        <p class="lead">We are really sorry.!! Could not find any meal for your search.!! Try Something
+            Different or Try
+            to search by any Ingredient name</p>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
