@@ -17,7 +17,6 @@ const fetchMeals = async (query) => {
                 result.classList.remove('hidden')
                 error404.classList.add('hidden')
                 data.meals.forEach(meal => {
-                    console.log(meal);
                     updateUI(meal)
                 })
             } else {
