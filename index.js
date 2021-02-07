@@ -95,7 +95,7 @@ const updateUI = data => {
 }
 
 searchForm.addEventListener('submit', async e => {
-    if (searchForm.value) {
+    if (searchForm.input.value) {
         e.preventDefault()
         const query = `?s=${searchForm.input.value.trim()}`
         fetchMeals(query)
