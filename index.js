@@ -57,7 +57,7 @@ const updateUI = data => {
                 <div class="modal-body text-center" id="meals-details">
                     <img class="img-fluid rounded mb-4" src="${data.strMealThumb}" alt="">
                     <h4>${data.strMeal}</h4>
-                    <h5 class="pt-3 pb-2">Ingredients</h5>
+                    <h5 class="pt-3 pb-2 display-4">Ingredients</h5>
                     <ul class="list-unstyled ingredients mb-0">
                         <li> ${data.strIngredient1} --- ${data.strMeasure1}</li>
                         <li> ${data.strIngredient2} --- ${data.strMeasure2}</li>
