@@ -96,10 +96,11 @@ img {
 .hidden {
   display: none !important;
 }
+
 .modal-body {
   height: 75vh;
   overflow: auto;
 }
-.modal-content {
-  width: 130%;
+.modal-dialog {
+  max-width: 60%;
 }
