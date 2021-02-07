@@ -59,26 +59,26 @@ const updateUI = data => {
                     <h4>${data.strMeal}</h4>
                     <h5 class="pt-3 pb-2">Ingredients</h5>
                     <ul class="list-unstyled ingredients mb-0">
-                        <li><i class="icon-check icons"></i> ${data.strIngredient1} --- ${data.strMeasure1}</li>
-                        <li><i class="icon-check icons"></i> ${data.strIngredient2} --- ${data.strMeasure2}</li>
-                        <li><i class="icon-check icons"></i> ${data.strIngredient3} --- ${data.strMeasure3}</li>
-                        <li><i class="icon-check icons"></i> ${data.strIngredient4} --- ${data.strMeasure4}</li>
-                        <li><i class="icon-check icons"></i> ${data.strIngredient5} --- ${data.strMeasure5}</li>
-                        <li><i class="icon-check icons"></i> ${data.strIngredient6} --- ${data.strMeasure6}</li>
-                        <li><i class="icon-check icons"></i> ${data.strIngredient7} --- ${data.strMeasure7}</li>
-                        <li><i class="icon-check icons"></i> ${data.strIngredient8} --- ${data.strMeasure8}</li>
-                        <li><i class="icon-check icons"></i> ${data.strIngredient9} --- ${data.strMeasure9}</li>
-                        <li><i class="icon-check icons"></i> ${data.strIngredient10} --- ${data.strMeasure10}</li>
-                        <li><i class="icon-check icons"></i> ${data.strIngredient11} --- ${data.strMeasure11}</li>
-                        <li><i class="icon-check icons"></i> ${data.strIngredient12} --- ${data.strMeasure12}</li>
-                        <li><i class="icon-check icons"></i> ${data.strIngredient13} --- ${data.strMeasure13}</li>
-                        <li><i class="icon-check icons"></i> ${data.strIngredient14} --- ${data.strMeasure14}</li>
-                        <li><i class="icon-check icons"></i> ${data.strIngredient15} --- ${data.strMeasure15}</li>
-                        <li><i class="icon-check icons"></i> ${data.strIngredient16} --- ${data.strMeasure16}</li>
-                        <li><i class="icon-check icons"></i> ${data.strIngredient17} --- ${data.strMeasure17}</li>
-                        <li><i class="icon-check icons"></i> ${data.strIngredient18} --- ${data.strMeasure18}</li>
-                        <li><i class="icon-check icons"></i> ${data.strIngredient19} --- ${data.strMeasure19}</li>
-                        <li><i class="icon-check icons"></i> ${data.strIngredient20} --- ${data.strMeasure20}</li>
+                        <li> ${data.strIngredient1} --- ${data.strMeasure1}</li>
+                        <li> ${data.strIngredient2} --- ${data.strMeasure2}</li>
+                        <li> ${data.strIngredient3} --- ${data.strMeasure3}</li>
+                        <li> ${data.strIngredient4} --- ${data.strMeasure4}</li>
+                        <li> ${data.strIngredient5} --- ${data.strMeasure5}</li>
+                        <li> ${data.strIngredient6} --- ${data.strMeasure6}</li>
+                        <li> ${data.strIngredient7} --- ${data.strMeasure7}</li>
+                        <li> ${data.strIngredient8} --- ${data.strMeasure8}</li>
+                        <li> ${data.strIngredient9} --- ${data.strMeasure9}</li>
+                        <li> ${data.strIngredient10} --- ${data.strMeasure10}</li>
+                        <li> ${data.strIngredient11} --- ${data.strMeasure11}</li>
+                        <li> ${data.strIngredient12} --- ${data.strMeasure12}</li>
+                        <li> ${data.strIngredient13} --- ${data.strMeasure13}</li>
+                        <li> ${data.strIngredient14} --- ${data.strMeasure14}</li>
+                        <li> ${data.strIngredient15} --- ${data.strMeasure15}</li>
+                        <li> ${data.strIngredient16} --- ${data.strMeasure16}</li>
+                        <li> ${data.strIngredient17} --- ${data.strMeasure17}</li>
+                        <li> ${data.strIngredient18} --- ${data.strMeasure18}</li>
+                        <li> ${data.strIngredient19} --- ${data.strMeasure19}</li>
+                        <li> ${data.strIngredient20} --- ${data.strMeasure20}</li>
                     </ul>
                     <h2 class="text-center mt-4">Detailed Instructions</h2>
                     <p class="text-center lead my-4">${data.strInstructions}</p>
