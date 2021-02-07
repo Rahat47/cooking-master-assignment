@@ -17,6 +17,7 @@ const fetchMeals = async (query) => {
                 result.classList.remove('hidden')
                 error404.classList.add('hidden')
                 data.meals.forEach(meal => {
+                    console.log(meal);
                     updateUI(meal)
                 })
             } else {
@@ -35,11 +36,11 @@ const updateUI = data => {
 
     //HTML TEMPLATE
     let html = `
-        <div class="card my-4" data-meal-id="${data.idMeal}" data-bs-toggle="modal" data-bs-target="#exampleModal${id}">
+        <div class="card my-4 rounded-3" data-meal-id="${data.idMeal}" data-bs-toggle="modal" data-bs-target="#exampleModal${id}">
             <img src="${data.strMealThumb}" class="card-img-top" alt="${data.strMeal}">
             <div class="card-body">
                 <h5 class="card-title">${data.strMeal}</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text mt-4 small"><span class="text-muted">${data.strMeal}</span> is ${data.strArea.match(/^[aeiou]/gmi) ? 'an' : 'a'} ${data.strArea}, ${data.strCategory} dish.</p>
             </div>
             <div class="card-footer">
                 <small class="text-muted">Click to know more about this Recipie</small>
