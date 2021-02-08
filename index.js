@@ -33,7 +33,6 @@ const updateUI = (data) => {
     let id = data.idMeal
     let ingredients = Object.values(data).splice(9, 20).filter(item => item.trim())
     let measures = Object.values(data).splice(29, 20).filter(item => item.trim())
-    console.log(ingredients, measures);
     const htmlList = []
     for (let i = 0; i < ingredients.length; i++) {
         htmlList.push(`
@@ -64,7 +63,7 @@ const updateUI = (data) => {
                 <div class="modal-body text-center" id="meals-details">
                     <img class="img-fluid rounded mb-4" src="${data.strMealThumb}" alt="">
                     <h4>${data.strMeal}</h4>
-                    <h5 class="pt-3 pb-2 display-4">Ingredients</h5>
+                    <h5 class="pt-3 pb-2 display-4 text-primary">Ingredients</h5>
                     <ul class="list-unstyled ingredients mb-0">
                         ${htmlList.join(' ')}
                     </ul>
@@ -73,7 +72,7 @@ const updateUI = (data) => {
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ok</button>
-                    <a href="${data.strYoutube}" target="_blank" class="btn btn-info">See Video</a>
+                    <a href="${data.strYoutube}" target="_blank" class="btn btn-info">Watch Video</a>
                 </div>
             </div>
         </div>
@@ -84,7 +83,7 @@ const updateUI = (data) => {
 }
 
 searchForm.addEventListener('submit', async e => {
-    if (searchForm.input.value) {
+    if (searchForm.input.value.trim()) {
         e.preventDefault()
         const query = `?s=${searchForm.input.value.trim()}`
         fetchMeals(query)
