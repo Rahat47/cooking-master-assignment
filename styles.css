@@ -104,3 +104,14 @@ img {
 .modal-dialog {
   max-width: 60%;
 }
+.each-ingredient {
+  margin: 0 auto;
+  display: table;
+  width: 60%;
+  table-layout: fixed;
+}
+.each-ingredient span {
+  padding: 10px 0;
+  display: table-cell;
+  text-align: center;
+}

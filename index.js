@@ -27,12 +27,20 @@ const fetchMeals = async (query) => {
         .catch(err => console.log(err))
 }
 
-const updateUI = data => {
+const updateUI = (data) => {
 
     //Meal Data
     let id = data.idMeal
-
-
+    let ingredients = Object.values(data).splice(9, 20).filter(item => item.trim())
+    let measures = Object.values(data).splice(29, 20).filter(item => item.trim())
+    console.log(ingredients, measures);
+    const htmlList = []
+    for (let i = 0; i < ingredients.length; i++) {
+        htmlList.push(`
+        <li class="each-ingredient"> 
+            <span>${ingredients[i]}</span> <span> ----- </span> <span>${measures[i]}</span>
+        </li>`)
+    }
     //HTML TEMPLATE
     let html = `
         <div class="card my-4 rounded-3" data-meal-id="${data.idMeal}" data-bs-toggle="modal" data-bs-target="#exampleModal${id}">
@@ -58,33 +66,14 @@ const updateUI = data => {
                     <h4>${data.strMeal}</h4>
                     <h5 class="pt-3 pb-2 display-4">Ingredients</h5>
                     <ul class="list-unstyled ingredients mb-0">
-                        <li> ${data.strIngredient1} --- ${data.strMeasure1}</li>
-                        <li> ${data.strIngredient2} --- ${data.strMeasure2}</li>
-                        <li> ${data.strIngredient3} --- ${data.strMeasure3}</li>
-                        <li> ${data.strIngredient4} --- ${data.strMeasure4}</li>
-                        <li> ${data.strIngredient5} --- ${data.strMeasure5}</li>
-                        <li> ${data.strIngredient6} --- ${data.strMeasure6}</li>
-                        <li> ${data.strIngredient7} --- ${data.strMeasure7}</li>
-                        <li> ${data.strIngredient8} --- ${data.strMeasure8}</li>
-                        <li> ${data.strIngredient9} --- ${data.strMeasure9}</li>
-                        <li> ${data.strIngredient10} --- ${data.strMeasure10}</li>
-                        <li> ${data.strIngredient11} --- ${data.strMeasure11}</li>
-                        <li> ${data.strIngredient12} --- ${data.strMeasure12}</li>
-                        <li> ${data.strIngredient13} --- ${data.strMeasure13}</li>
-                        <li> ${data.strIngredient14} --- ${data.strMeasure14}</li>
-                        <li> ${data.strIngredient15} --- ${data.strMeasure15}</li>
-                        <li> ${data.strIngredient16} --- ${data.strMeasure16}</li>
-                        <li> ${data.strIngredient17} --- ${data.strMeasure17}</li>
-                        <li> ${data.strIngredient18} --- ${data.strMeasure18}</li>
-                        <li> ${data.strIngredient19} --- ${data.strMeasure19}</li>
-                        <li> ${data.strIngredient20} --- ${data.strMeasure20}</li>
+                        ${htmlList.join(' ')}
                     </ul>
                     <h2 class="text-center mt-4">Detailed Instructions</h2>
                     <p class="text-center lead my-4">${data.strInstructions}</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Ok</button>
-                    <a href="${data.strYoutube}" target="_blank" class="btn btn-primary">See Video</a>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ok</button>
+                    <a href="${data.strYoutube}" target="_blank" class="btn btn-info">See Video</a>
                 </div>
             </div>
         </div>
@@ -107,3 +96,4 @@ searchForm.addEventListener('submit', async e => {
         e.preventDefault()
     }
 })
+
